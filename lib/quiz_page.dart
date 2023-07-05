@@ -20,25 +20,13 @@ class _QuizPageState extends State<QuizPage> {
   int secondsRemaining = totalSecondsPerQuestion;
   late Timer timer;
   final List<Question> questions = [
-    Question('Pergunta 1', ['Resposta X', 'Resposta Y', 'Resposta Z','Resposta W'], 1),
-    Question('Pergunta 2', ['Resposta A', 'Resposta B', 'Resposta C'], 0),
-
+    Question('Pergunta 1', ['Resposta 1', 'Resposta 2', 'Resposta 3'], 0),
     // Adicione as perguntas restantes aqui
   ];
 
   @override
   void initState() {
     super.initState();
-    startTimer();
-  }
-
-  @override
-  void dispose() {
-    timer.cancel();
-    super.dispose();
-  }
-
-  void startTimer() {
     timer = Timer.periodic(Duration(seconds: 1), (Timer timer) {
       setState(() {
         if (secondsRemaining > 0) {
@@ -51,20 +39,28 @@ class _QuizPageState extends State<QuizPage> {
     });
   }
 
+  @override
+  void dispose() {
+    timer.cancel();
+    super.dispose();
+  }
+
   void goToNextQuestion() {
     if (questionIndex < questions.length - 1) {
       setState(() {
         questionIndex++;
         secondsRemaining = totalSecondsPerQuestion;
-        startTimer();
       });
     } else {
-      Navigator.pushReplacement(
-        context,
-        MaterialPageRoute(
-          builder: (context) => ScorePage(widget.playerName, score),
-        ),
-      );
+      if (mounted) {
+        timer.cancel();
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(
+            builder: (context) => ScorePage(widget.playerName, score),
+          ),
+        );
+      }
     }
   }
 
