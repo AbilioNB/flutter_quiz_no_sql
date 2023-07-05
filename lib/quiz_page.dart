@@ -35,7 +35,6 @@ class _QuizPageState extends State<QuizPage> {
     return allQuestions.where((question) => questionIds.contains(question.id)).toList();
   }
 
-
   List<int> generateRandomQuestionIds(int maxId, int count) {
     final List<int> ids = [];
     final Random random = Random();
@@ -56,24 +55,28 @@ class _QuizPageState extends State<QuizPage> {
 
   void startTimer() {
     timer = Timer.periodic(Duration(seconds: 1), (Timer timer) {
-      setState(() {
-        if (secondsRemaining > 0) {
-          secondsRemaining--;
-        } else {
-          timer.cancel();
-          goToNextQuestion();
-        }
-      });
+      if (mounted) {
+        setState(() {
+          if (secondsRemaining > 0) {
+            secondsRemaining--;
+          } else {
+            timer.cancel();
+            goToNextQuestion();
+          }
+        });
+      }
     });
   }
 
   void goToNextQuestion() {
     if (questionIndex < questions.length - 1) {
-      setState(() {
-        questionIndex++;
-        secondsRemaining = totalSecondsPerQuestion;
-        startTimer();
-      });
+      if (mounted) {
+        setState(() {
+          questionIndex++;
+          secondsRemaining = totalSecondsPerQuestion;
+          startTimer();
+        });
+      }
     } else {
       if (mounted) {
         timer?.cancel();
@@ -89,9 +92,11 @@ class _QuizPageState extends State<QuizPage> {
 
   void checkAnswer(int selectedIndex) {
     if (selectedIndex == questions[questionIndex].correctAnswer) {
-      setState(() {
-        score++;
-      });
+      if (mounted) {
+        setState(() {
+          score++;
+        });
+      }
     }
     goToNextQuestion();
   }
