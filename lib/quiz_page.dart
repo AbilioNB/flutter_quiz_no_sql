@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'score_page.dart';
 import 'question.dart';
 
-const int totalSecondsPerQuestion = 25; // Tempo total para responder cada pergunta em segundos
+const int totalSecondsPerQuestion = 25;
 
 class QuizPage extends StatefulWidget {
   final String playerName;
@@ -21,7 +21,6 @@ class _QuizPageState extends State<QuizPage> {
   Timer? timer;
   final List<Question> questions = [
     Question('Pergunta 1', ['Resposta 1', 'Resposta 2', 'Resposta 3'], 0),
-    Question('Pergunta 2', ['Resposta 1', 'Resposta 2', 'Resposta 3'], 1),
     // Adicione as perguntas restantes aqui
   ];
 
@@ -87,46 +86,76 @@ class _QuizPageState extends State<QuizPage> {
       appBar: AppBar(
         title: Text('Quiz'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              'Pergunta ${questionIndex + 1}',
-              style: TextStyle(fontSize: 24),
-            ),
-            SizedBox(height: 20),
-            Text(
-              questions[questionIndex].questionText,
-              style: TextStyle(fontSize: 18),
-            ),
-            SizedBox(height: 20),
-            Column(
-              children: List.generate(
-                questions[questionIndex].options.length,
-                    (index) {
-                  return ElevatedButton(
-                    onPressed: () {
-                      checkAnswer(index);
-                    },
-                    child: Text(questions[questionIndex].options[index]),
-                  );
-                },
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Expanded(
+            flex: 2,
+            child: Container(
+              padding: EdgeInsets.all(20),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    'Pergunta ${questionIndex + 1}',
+                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                  ),
+                  SizedBox(height: 20),
+                  Text(
+                    questions[questionIndex].questionText,
+                    style: TextStyle(fontSize: 18),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
               ),
             ),
-            SizedBox(height: 20),
-            LinearProgressIndicator(
+          ),
+          Expanded(
+            flex: 4,
+            child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: List.generate(
+                  questions[questionIndex].options.length,
+                      (index) {
+                    return ElevatedButton(
+                      onPressed: () {
+                        checkAnswer(index);
+                      },
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(Colors.blue),
+                        padding: MaterialStateProperty.all(EdgeInsets.all(15)),
+                      ),
+                      child: Text(
+                        questions[questionIndex].options[index],
+                        style: TextStyle(fontSize: 18),
+                        textAlign: TextAlign.center,
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ),
+          ),
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            child: LinearProgressIndicator(
               value: progressValue,
-              backgroundColor: Colors.grey,
+              backgroundColor: Colors.grey[300],
               valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
             ),
-            SizedBox(height: 20),
-            Text(
+          ),
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            child: Text(
               'Tempo restante: $secondsRemaining segundos',
               style: TextStyle(fontSize: 18),
+              textAlign: TextAlign.center,
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
