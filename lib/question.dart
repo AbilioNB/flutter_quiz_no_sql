@@ -1,7 +1,13 @@
 class Question {
-  final String questionText;
+  final int id;
+  final String question_text;
   final List<String> options;
-  final int correctAnswerIndex;
+  final int correctAnswer;
 
-  Question(this.questionText, this.options, this.correctAnswerIndex);
+  Question({
+    required this.id,
+    required this.question_text,
+    required this.options,
+    required this.correctAnswer,
+  });
 }

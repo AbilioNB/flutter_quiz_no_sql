@@ -1,7 +1,9 @@
 import 'dart:async';
+import 'dart:math';
 import 'package:flutter/material.dart';
 import 'score_page.dart';
 import 'question.dart';
+import 'questions.dart';
 
 const int totalSecondsPerQuestion = 25;
 
@@ -19,15 +21,31 @@ class _QuizPageState extends State<QuizPage> {
   int score = 0;
   int secondsRemaining = totalSecondsPerQuestion;
   Timer? timer;
-  final List<Question> questions = [
-    Question('Pergunta 1', ['Resposta 1', 'Resposta 2', 'Resposta 3'], 0),
-    // Adicione as perguntas restantes aqui
-  ];
+  List<Question> questions = [];
 
   @override
   void initState() {
     super.initState();
     startTimer();
+    questions = getRandomQuestions();
+  }
+
+  List<Question> getRandomQuestions() {
+    List<int> questionIds = generateRandomQuestionIds(30, 12);
+    return allQuestions.where((question) => questionIds.contains(question.id)).toList();
+  }
+
+
+  List<int> generateRandomQuestionIds(int maxId, int count) {
+    final List<int> ids = [];
+    final Random random = Random();
+    while (ids.length < count) {
+      final int id = random.nextInt(maxId) + 1;
+      if (!ids.contains(id)) {
+        ids.add(id);
+      }
+    }
+    return ids;
   }
 
   @override
@@ -70,7 +88,7 @@ class _QuizPageState extends State<QuizPage> {
   }
 
   void checkAnswer(int selectedIndex) {
-    if (selectedIndex == questions[questionIndex].correctAnswerIndex) {
+    if (selectedIndex == questions[questionIndex].correctAnswer) {
       setState(() {
         score++;
       });
@@ -102,7 +120,7 @@ class _QuizPageState extends State<QuizPage> {
                   ),
                   SizedBox(height: 20),
                   Text(
-                    questions[questionIndex].questionText,
+                    questions[questionIndex].question_text,
                     style: TextStyle(fontSize: 18),
                     textAlign: TextAlign.center,
                   ),
