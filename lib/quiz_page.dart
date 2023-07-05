@@ -18,15 +18,26 @@ class _QuizPageState extends State<QuizPage> {
   int questionIndex = 0;
   int score = 0;
   int secondsRemaining = totalSecondsPerQuestion;
-  late Timer timer;
+  Timer? timer;
   final List<Question> questions = [
     Question('Pergunta 1', ['Resposta 1', 'Resposta 2', 'Resposta 3'], 0),
+    Question('Pergunta 2', ['Resposta 1', 'Resposta 2', 'Resposta 3'], 1),
     // Adicione as perguntas restantes aqui
   ];
 
   @override
   void initState() {
     super.initState();
+    startTimer();
+  }
+
+  @override
+  void dispose() {
+    timer?.cancel();
+    super.dispose();
+  }
+
+  void startTimer() {
     timer = Timer.periodic(Duration(seconds: 1), (Timer timer) {
       setState(() {
         if (secondsRemaining > 0) {
@@ -39,21 +50,16 @@ class _QuizPageState extends State<QuizPage> {
     });
   }
 
-  @override
-  void dispose() {
-    timer.cancel();
-    super.dispose();
-  }
-
   void goToNextQuestion() {
     if (questionIndex < questions.length - 1) {
       setState(() {
         questionIndex++;
         secondsRemaining = totalSecondsPerQuestion;
+        startTimer();
       });
     } else {
       if (mounted) {
-        timer.cancel();
+        timer?.cancel();
         Navigator.pushReplacement(
           context,
           MaterialPageRoute(
@@ -75,6 +81,8 @@ class _QuizPageState extends State<QuizPage> {
 
   @override
   Widget build(BuildContext context) {
+    double progressValue = secondsRemaining / totalSecondsPerQuestion;
+
     return Scaffold(
       appBar: AppBar(
         title: Text('Quiz'),
@@ -107,8 +115,14 @@ class _QuizPageState extends State<QuizPage> {
               ),
             ),
             SizedBox(height: 20),
+            LinearProgressIndicator(
+              value: progressValue,
+              backgroundColor: Colors.grey,
+              valueColor: AlwaysStoppedAnimation<Color>(Colors.blue),
+            ),
+            SizedBox(height: 20),
             Text(
-              'Tempo restante: $secondsRemaining',
+              'Tempo restante: $secondsRemaining segundos',
               style: TextStyle(fontSize: 18),
             ),
           ],
