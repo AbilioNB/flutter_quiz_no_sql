@@ -6,7 +6,7 @@ class InfoPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFF5BBF8C), // Cor da barra de aplicativos
+        backgroundColor: Color(0xFF30B3B7), // Cor da barra de aplicativos
         title: Text('Material de Apoio'),
       ),
       body: Container(
@@ -15,36 +15,36 @@ class InfoPage extends StatelessWidget {
           padding: EdgeInsets.all(16.0),
           children: [
             HelpCard(
-              cardName: 'Card 1',
-              cardLink: 'https://www.google.com.br',
+              cardName: 'MongoDB University',
+              cardLink: 'https://university.mongodb.com/',
             ),
             HelpCard(
-              cardName: 'Card 2',
-              cardLink: 'https://www.google.com.br',
+              cardName: 'Redis Labs Training',
+              cardLink: 'https://redislabs.com/redis-best-practices/redis-training/',
             ),
             HelpCard(
-              cardName: 'Card 3',
-              cardLink: 'https://www.google.com.br',
+              cardName: 'Couchbase Developer Portal',
+              cardLink: 'https://developer.couchbase.com/',
             ),
             HelpCard(
-              cardName: 'Card 4',
-              cardLink: 'https://www.google.com.br',
+              cardName: 'Neo4j GraphAcademy',
+              cardLink: 'https://neo4j.com/graphacademy/',
             ),
             HelpCard(
-              cardName: 'Card 5',
-              cardLink: 'https://www.google.com.br',
+              cardName: 'Cassandra Documentation',
+              cardLink: ' https://cassandra.apache.org/doc/latest/',
             ),
             HelpCard(
-              cardName: 'Card 6',
-              cardLink: 'https://www.google.com.br',
+              cardName: 'O que é NoSQL?',
+              cardLink: 'https://www.oracle.com/br/database/nosql/what-is-nosql/',
             ),
             HelpCard(
-              cardName: 'Card 7',
-              cardLink: 'https://www.google.com.br',
+              cardName: 'Blog do Lomadee',
+              cardLink: 'https://www.lomadee.com/blog/tudo-sobre-banco-de-dados-nosql/',
             ),
             HelpCard(
-              cardName: 'Card 8',
-              cardLink: 'https://www.google.com.br',
+              cardName: 'Couchbase Brasil',
+              cardLink: 'https://www.couchbase.com.br/',
             ),
             SizedBox(height: 16.0),
             ElevatedButton(
@@ -53,7 +53,7 @@ class InfoPage extends StatelessWidget {
               },
               child: Text('Voltar'),
               style: ElevatedButton.styleFrom(
-                primary: Color(0xFF8AC53F), // Cor do botão Voltar
+                primary: Color(0xFF1D63CB), // Cor do botão Voltar
               ),
             ),
           ],
