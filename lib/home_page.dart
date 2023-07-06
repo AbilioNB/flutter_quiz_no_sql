@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Quiz App'),
+        title: Text('Tela Principal'),
       ),
       body: Container(
         padding: EdgeInsets.all(20),
@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text(
-              'Bem-vindo ao Quiz App!',
+              'Bem-vindo ao NoSQL Quiz!',
               style: TextStyle(
                 fontSize: 24,
                 fontWeight: FontWeight.bold,
@@ -29,7 +29,7 @@ class HomePage extends StatelessWidget {
             TextField(
               controller: nameController,
               decoration: InputDecoration(
-                hintText: 'Digite seu nome',
+                hintText: 'Informe seu nome',
                 labelText: 'Nome',
                 border: OutlineInputBorder(),
               ),
@@ -54,7 +54,7 @@ class HomePage extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => InfoPage()),
                 );
               },
-              child: Text('Informações'),
+              child: Text('Material de Apoio'),
             ),
           ],
         ),

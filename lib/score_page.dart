@@ -23,11 +23,11 @@ class ScorePage extends StatelessWidget {
     if (score == 12) {
       return 'Parabéns, excelente trabalho!';
     } else if (score > 9 && score < 12) {
-      return 'Bom trabalho, teve uma boa pontuação.';
+      return 'Bom trabalho, você obteve uma boa pontuação.';
     } else if (score > 5 && score <= 9) {
-      return 'Poderia ser melhor, que tal olhar nosso material de apoio?';
+      return 'Poderia ser melhor, que tal  acessar o material de apoio?';
     } else {
-      return 'Poxa, é importante estudar novamente os conceitos, visite nosso material de apoio.';
+      return 'Poxa, é importante estudar novamente os conceitos, acesse o material de apoio.';
     }
   }
 
