@@ -13,7 +13,7 @@ class ScorePage extends StatelessWidget {
     } else if (score > 9 && score < 12) {
       return Colors.green;
     } else if (score > 5 && score <= 9) {
-      return Colors.yellow;
+      return Colors.deepOrange;
     } else {
       return Colors.red;
     }
