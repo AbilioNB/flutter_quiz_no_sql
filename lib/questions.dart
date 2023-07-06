@@ -5,15 +5,20 @@ import 'quiz_page.dart';
 final List<Question> allQuestions = [
   Question(
     id: 1,
-    question_text: "Qual é um exemplo de banco de dados NoSQL baseado em documentos?",
-    options: ["MySQL", "PostgreSQL", "MongoDB", "SQLite"],
-    correctAnswer:2,
+    question_text: "O que é esquema rígido em bancos de dados SQL?",
+    options: ["O esquema dos dados não pode ser modificado após a criação do banco de dados.",
+      "O esquema dos dados pode ser modificado a qualquer momento sem restrições.",
+      "O esquema dos dados pode ser modificado, mas apenas por um administrador.",
+      "O esquema dos dados é definido pelos usuários finais."],
+    correctAnswer:0,
   ),
   Question(
     id: 2,
-    question_text: "Qual é um exemplo de banco de dados NoSQL baseado em documentos?",
-    options: ["MySQL", "PostgreSQL", "MongoDB", "SQLite"],
-    correctAnswer:2,
+    question_text: "Qual das seguintes opções é verdadeira sobre bancos de dados NoSQL?",
+    options: ["São projetados principalmente para dados não estruturados.",
+      "São projetados principalmente para dados estruturados.", "Podem ser utilizados apenas para consultas simples.",
+      "São projetados para suportar apenas baixos volumes de dados."],
+    correctAnswer:1,
   ),Question(
     id: 3,
     question_text: "Qual é um exemplo de banco de dados NoSQL baseado em documentos?",
@@ -149,14 +154,14 @@ final List<Question> allQuestions = [
   ),
   Question(
     id: 29,
-    question_text: "Qual é um exemplo de banco de dados NoSQL baseado em documentos?",
+    question_text: "Quais são as desvantagens de usar um banco de dados NoSQL?",
     options: ["MySQL", "PostgreSQL", "MongoDB", "SQLite"],
     correctAnswer:2,
   ),
   Question(
     id: 30,
-    question_text: "Qual é um exemplo de banco de dados NoSQL baseado em documentos?",
-    options: ["MySQL", "PostgreSQL", "MongoDB", "SQLite"],
+    question_text: "Qual das seguintes opções é um exemplo de banco de dados SQL?",
+    options: ["Cassandra", "MongoDB", "PostgreSQL", "Redis"],
     correctAnswer:2,
   ),
 ];

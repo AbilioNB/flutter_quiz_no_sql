@@ -11,13 +11,19 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Quiz App'),
       ),
-      body: Center(
+      body: Container(
+        padding: EdgeInsets.all(20),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             Text(
               'Bem-vindo ao Quiz App!',
-              style: TextStyle(fontSize: 24),
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+              textAlign: TextAlign.center,
             ),
             SizedBox(height: 20),
             TextField(
@@ -25,6 +31,7 @@ class HomePage extends StatelessWidget {
               decoration: InputDecoration(
                 hintText: 'Digite seu nome',
                 labelText: 'Nome',
+                border: OutlineInputBorder(),
               ),
             ),
             SizedBox(height: 20),
