@@ -1,6 +1,6 @@
 import 'package:flutter_quiz/question.dart';
 
-import 'quiz_page.dart';
+
 
 final List<Question> allQuestions = [
   Question(
