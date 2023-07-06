@@ -74,7 +74,7 @@ class _QuizPageState extends State<QuizPage> {
         setState(() {
           questionIndex++;
           secondsRemaining = totalSecondsPerQuestion;
-          startTimer();
+         // startTimer();//Verificar essa linha
         });
       }
     } else {
