@@ -2,7 +2,9 @@
 
 ----
 
-![alt text](assets/logo.png)
+<img src="assets/logo.png" width="100" height="100" />
+
+
 
 Repositório do projeto NoSQL Quiz, um quiz game que teste os conhecimentos do usário sobre bancos de dados NoSQL. 
 Além de testar os conhecimentos do usuário em 12 perguntas com 25 segundos para responde-las, é fornecido támbem links de 
