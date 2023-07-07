@@ -25,7 +25,7 @@ Esse aplicativo foi desenvolvido durante a disciplina de Fundamentos de Programa
 
 ## Diagrama de Navegação 
 
-<img src="re/fluxograma_principal.png" width="200" height="200" />
+<img src="re/fluxograma_principal.png" />
 
 ## Árvore de Widget
 
