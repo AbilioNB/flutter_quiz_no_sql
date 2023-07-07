@@ -1,16 +1,23 @@
-# flutter_quiz
+# NoSQL Quiz
 
 ----
+Repositório do projeto NoSQL Quiz, um quiz game que teste os conhecimentos do usário sobre bancos de dados NoSQL. 
+Além de testar os conhecimentos do usuário em 12 perguntas com 25 segundos para responde-las, é fornecido támbem links de 
+apoio para a melhoria e continuidade dos estudos no tema.
 
-## Getting Started
+Esse aplicativo foi desenvolvido durante a disciplina de Fundamentos de Programação Aplicada, PPGIA-UFRPE.
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## Apresentação do aplicativo
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- [Vídeo de apresentação da aplicação](https://docs.flutter.dev/get-started/codelab)
+- [Demonstração da utilização](https://docs.flutter.dev/cookbook)
+
+## Disponibilização do aplicativo
+
+- [Android](https://docs.flutter.dev/cookbook)
+
+## Diagrama de Navegação 
+
+## Árvore de Widget

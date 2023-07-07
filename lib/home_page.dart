@@ -26,6 +26,14 @@ class HomePage extends StatelessWidget {
               textAlign: TextAlign.center,
             ),
             SizedBox(height: 20),
+            Text(
+              'Você terá 25 segundos para responder cada uma das 12 questões sobre o mundo do NoSQL',
+              style: TextStyle(
+                fontSize: 16,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            SizedBox(height: 20),
             TextField(
               controller: nameController,
               decoration: InputDecoration(
