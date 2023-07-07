@@ -17,6 +17,12 @@ class HomePage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
+            Image.asset(
+              'assets/logo.png',
+              height: 100,
+              width: 100,
+            ),
+            SizedBox(height: 20),
             Text(
               'Bem-vindo ao NoSQL Quiz!',
               style: TextStyle(
@@ -27,7 +33,7 @@ class HomePage extends StatelessWidget {
             ),
             SizedBox(height: 20),
             Text(
-              'Você terá 25 segundos para responder cada uma das 12 questões sobre o mundo do NoSQL',
+              'Você terá de responder 12 questões sobre o mundo do NoSQL, mas atenção utilize bem seus 25 segundos em cada uma delas. ',
               style: TextStyle(
                 fontSize: 16,
               ),
