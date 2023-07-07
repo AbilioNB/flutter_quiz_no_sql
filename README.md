@@ -21,3 +21,7 @@ Esse aplicativo foi desenvolvido durante a disciplina de Fundamentos de Programa
 ## Diagrama de Navegação 
 
 ## Árvore de Widget
+
+## Protótipo da Aplicação
+
+- [Figma](https://docs.flutter.dev/cookbook)
