@@ -25,10 +25,10 @@ Esse aplicativo foi desenvolvido durante a disciplina de Fundamentos de Programa
 
 ## Diagrama de Navegação 
 
-<img src="re/fluxograma_principal.png" width="200" height="200" />
+<img src="re/fluxograma_principal.png" />
 
 ## Árvore de Widget
 
 ## Protótipo da Aplicação
 
-- [Figma](https://docs.flutter.dev/cookbook)
+- [Figma](https://www.figma.com/file/XaBg7WL8V7OvNwARrYgiU2/NoSQL-Quiz?type=design&node-id=0%3A1&mode=design&t=8shjS1L0hd6CDjt7-1)
