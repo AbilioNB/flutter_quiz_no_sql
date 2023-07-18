@@ -31,9 +31,27 @@ Esse aplicativo foi desenvolvido durante a disciplina de Fundamentos de Programa
 
 <h3>Tela Principal</h3>
 
-|                          Tela                          |                     Diagrama                     |
+|                          Tela                          |                     Widget Tree                  |
 |:------------------------------------------------------:|:------------------------------------------------:|
-| ![alt text](<img src="re/tela_principal.jpeg" />) | ![alt text](<img src="re/tela_principal.PNG" />) |
+| <img src="re/tela_principal.jpeg" height="400px" /> | <img src="re/tela_principal.PNG" height="400px" />|
+
+<h3>Tela Material Apoio</h3>
+
+|                          Tela                          |                     Widget Tree                  |
+|:------------------------------------------------------:|:------------------------------------------------:|
+| <img src="re/tela_material_apoio.jpeg" height="400px" /> | <img src="re/info_page.PNG" height="400px" />|
+
+<h3>Tela Pergunta</h3>
+
+|                          Tela                          |                     Widget Tree                  |
+|:------------------------------------------------------:|:------------------------------------------------:|
+| <img src="re/tela_pergunta.jpeg" height="400px" /> | <img src="re/quiz_page.PNG" height="400px" />|
+
+<h3>Tela Score</h3>
+
+|                          Tela                          |                     Widget Tree                  |
+|:------------------------------------------------------:|:------------------------------------------------:|
+| <img src="re/tela_score.jpeg" height="400px" /> | <img src="re/score_page.PNG" height="400px" />|
 
 ## Protótipo da Aplicação
 
