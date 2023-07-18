@@ -29,6 +29,12 @@ Esse aplicativo foi desenvolvido durante a disciplina de Fundamentos de Programa
 
 ## Árvore de Widget
 
+<h3>Tela Principal</h3>
+
+|                          Tela                          |                     Diagrama                     |
+|:------------------------------------------------------:|:------------------------------------------------:|
+| ![alt text](<img src="re/tela_principal.jpeg" />) | ![alt text](<img src="re/tela_principal.PNG" />) |
+
 ## Protótipo da Aplicação
 
 - [Figma](https://www.figma.com/file/XaBg7WL8V7OvNwARrYgiU2/NoSQL-Quiz?type=design&node-id=0%3A1&mode=design&t=8shjS1L0hd6CDjt7-1)
