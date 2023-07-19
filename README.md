@@ -21,7 +21,7 @@ Esse aplicativo foi desenvolvido durante a disciplina de Fundamentos de Programa
 
 ## Disponibilização do aplicativo
 
-- [Android]([https://docs.flutter.dev/cookbook](https://play.google.com/store/apps/details?id=br.fpa_ufrpe.NoSQL_Quiz))
+- [Android](https://play.google.com/store/apps/details?id=br.fpa_ufrpe.NoSQL_Quiz)
 
 ## Diagrama de Navegação 
 
