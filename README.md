@@ -16,18 +16,22 @@ Esse aplicativo foi desenvolvido durante a disciplina de Fundamentos de Programa
 
 ## Apresentação do aplicativo
 
-- [Vídeo de apresentação da aplicação](https://docs.flutter.dev/get-started/codelab)
-- [Demonstração da utilização](https://docs.flutter.dev/cookbook)
+- [Vídeo de apresentação da aplicação](https://youtu.be/uF8G97XldMM)
+- [Demonstração da utilização](https://youtu.be/Er3tL8nTt7o)
 
 ## Disponibilização do aplicativo
 
 - [Android](https://play.google.com/store/apps/details?id=br.fpa_ufrpe.NoSQL_Quiz)
 
+## Protótipo da Aplicação
+
+- [Figma](https://www.figma.com/file/XaBg7WL8V7OvNwARrYgiU2/NoSQL-Quiz?type=design&node-id=0%3A1&mode=design&t=8shjS1L0hd6CDjt7-1)
+
 ## Diagrama de Navegação 
 
 <img src="re/fluxograma_principal.png" />
 
-## Árvore de Widget
+## Widget Tree por tela
 
 <h3>Tela Principal</h3>
 
@@ -53,6 +57,3 @@ Esse aplicativo foi desenvolvido durante a disciplina de Fundamentos de Programa
 |:------------------------------------------------------:|:------------------------------------------------:|
 | <img src="re/tela_score.jpeg" height="400px" /> | <img src="re/score_page.PNG" height="400px" />|
 
-## Protótipo da Aplicação
-
-- [Figma](https://www.figma.com/file/XaBg7WL8V7OvNwARrYgiU2/NoSQL-Quiz?type=design&node-id=0%3A1&mode=design&t=8shjS1L0hd6CDjt7-1)
